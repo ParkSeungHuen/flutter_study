@@ -4,7 +4,9 @@ import 'package:studyflutter/study/MyAnimatedContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:studyflutter/study/MyAnimatedOptical.dart';
 import 'package:studyflutter/study/MyFormValidation.dart';
+import 'package:studyflutter/study/MyMethodChannelState.dart';
 import 'package:studyflutter/study/MyOrientationBuilder.dart';
+import 'package:studyflutter/study/MyPageView.dart';
 import 'package:studyflutter/study/MySnackBar.dart';
 import 'package:studyflutter/study/MySwipeToDismiss.dart';
 import 'package:studyflutter/study/MyTabController.dart';
@@ -31,6 +33,8 @@ class myApp extends StatelessWidget {
         '/MyTapController': (context) => MyTapController(),
         '/MyFormValidation': (context) => MyFormValidation(),
         '/MySwipeToDismiss': (context) => MySwipeToDismiss(),
+        '/MyMethodChannel': (context) => MyMethodChannel(),
+        '/MyPageView':(context) => MyPageView(),
 
       },
       home: Scaffold(
@@ -103,6 +107,20 @@ class _HomeState extends State<Home> {
             title: Text("SwipeToDismiss"),
             onTap: () {
               Navigator.pushNamed(context, '/MySwipeToDismiss',);
+            },
+          ),
+
+          ListTile(
+            title: Text("MethodChannelState"),
+            onTap: () {
+              Navigator.pushNamed(context, '/MyMethodChannel',);
+            },
+          ),
+
+          ListTile(
+            title: Text("PageView"),
+            onTap: () {
+              Navigator.pushNamed(context, '/MyPageView',);
             },
           ),
         ],
